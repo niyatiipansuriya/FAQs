@@ -151,12 +151,11 @@ Open your browser and go to http://127.0.0.1:8000/.
       "answer": "Python is an interpreted, high-level, general-purpose programming language."
     }
   ]
+  ```
 
 
 * **Description**: Returns all FAQs in Hindi.
 * **Example Response**:
-  ```json
-  [
     
 ```json
 [
@@ -171,7 +170,8 @@ Open your browser and go to http://127.0.0.1:8000/.
     "answer": "पायथन एक व्याख्यायित उच्च-स्तरीय सामान्य-उद्देश्य प्रोग्रामिंग भाषा है।"
   }
 ]
-  ]
+
+```
  
 ## Admin Panel
 Access the admin panel at http://127.0.0.1:8000/admin/
