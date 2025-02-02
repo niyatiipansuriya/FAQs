@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Application{% endblock %}</title>
+
+    <!-- Tailwind CSS (CDN version) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-black text-white shadow-lg p-4">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile Menu Button -->
+                    <button class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <a href="/" class="text-2xl font-bold text-white">~~FAQs~~</a>
+                </div>
+
+                <!-- Language Dropdown -->
+                <div class="ml-4 relative">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                        Languages
+                        <!-- Dropdown Icon (Font Awesome) -->
+                        <i class="fas fa-chevron-down ml-2"></i> <!-- The 'ml-2' adds a small left margin to the icon -->
+                    </button>
+                    <ul class="dropdown-menu absolute hidden text-gray-700 bg-white rounded shadow-lg mt-1 right-0 w-48 z-10">
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/en">English</a> <!-- English -->
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/hi/">हिन्दी</a> <!-- Hindi -->
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/gu/">ગુજરાતી</a> <!-- Gujarati -->
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/mr/">मराठी</a> <!-- Marathi -->
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/te/">తెలుగు</a> <!-- Telugu -->
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/ta/">தமிழ்</a> <!-- Tamil -->
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="/api/faqs/bn/">বাংলা</a> <!-- Bengali -->
+                    </ul>
+                </div>
+                
+                
+                <!-- Add this JavaScript at the end of your body tag -->
+                <script>
+                        document.getElementById('navbarDropdown').addEventListener('click', function () {
+                            // Toggle the visibility of the dropdown
+                            const dropdownMenu = document.querySelector('.dropdown-menu');
+                            dropdownMenu.classList.toggle('hidden');
+                        });
+                </script>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container mx-auto mt-8">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

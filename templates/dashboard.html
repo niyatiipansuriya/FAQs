@@ -1,0 +1,40 @@
+{% extends "basic.html" %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold text-center">All the FAQs!!</h1>
+    <p class="text-center mt-4">Welcome to the dashboard!</p>
+
+    <!-- Display FAQ List -->
+    <div class="faq-container mt-8 space-y-6">
+        {% for faq in faqs %}
+            <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+                <div class="question text-xl font-semibold text-blue-600">{{ faq.question }}</div>
+                <div class="answer mt-2 text-lg text-gray-700">
+                    {% autoescape off %}
+                        <div class="answer-text">
+                            {{ faq.answer }}
+                        </div>
+                    {% endautoescape %}
+                </div>
+            </div>
+        {% empty %}
+            <p class="text-center text-gray-500">Choose a language to view the FAQs.</p>
+        {% endfor %}
+    </div>
+
+    <style>
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .answer-text {
+            flex-grow: 1;  /* Allow the answer section to grow and take available space */
+            overflow-wrap: break-word; /* Ensure long words break properly */
+            word-wrap: break-word;     /* Prevent text from overflowing the container */
+            white-space: pre-wrap;     /* Preserve newlines and wrap text */
+            max-height: 200px;         /* Set a max height for the answer section */
+            overflow-y: auto;          /* Enable scrolling when content overflows */
+        }
+    </style>
+{% endblock %}
