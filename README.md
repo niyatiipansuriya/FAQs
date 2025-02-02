@@ -113,3 +113,14 @@ python manage.py runserver
 ###9. Access the application:
 Open your browser and go to http://127.0.0.1:8000/.
 
+## API Usage
+
+### Fetch all FAQs
+
+*   **Endpoint**: `http://localhost:8000/api/faqs/`
+*   **Description**: Returns all FAQs in English by default.
+
+### Fetch FAQs in a specific language
+
+*   **Endpoint**: `http://localhost:8000/api/faqs/<language_code>/`
+*   **Example**: `http://localhost:8000/api/faqs/gu/` will return FAQs in Gujarati.
