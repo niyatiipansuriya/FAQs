@@ -94,7 +94,7 @@ Install Redis on your machine** (if it's not already installed).
 
 ###6. Set up the Django project:
 
-  -First, run makemigrations to create any required migrations for the database:
+  -First, run makemigrations to create any required migrations for the database and then run migrate:
   ```bash
   python manage.py makemigrations
   python manage.py migrate
@@ -112,7 +112,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-###9. Access the application:
+### 9. Access the application:
 
 Open your browser and go to http://127.0.0.1:8000/.
 
