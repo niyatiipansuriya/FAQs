@@ -20,10 +20,11 @@ A Django-based FAQ management system with multi-language translation support. Th
 ## Table of Contents:
 1. [Installation](#installation)
 2. [API Usage](#api-usage)
-3. [Caching](#caching)
-4. [Contribution](#contribution)
-5. [License](#license)
-6. [Acknowledgments](#acknowledgment)
+3. [API Usage Example](#api_usage_example)
+4. [Caching](#caching)
+5. [Contribution](#contribution)
+6. [License](#license)
+7. [Acknowledgments](#acknowledgment)
 
 ---
 
@@ -131,6 +132,47 @@ Open your browser and go to http://127.0.0.1:8000/.
 *   **Example**: `http://localhost:8000/api/faqs/bn/` will return FAQs in Bengali.
 *   **Example**: `http://localhost:8000/api/faqs/hi/` will return FAQs in Hindi.
 
+
+### API Usage Example
+
+* **Endpoint**: `http://localhost:8000/api/faqs/`
+* **Description**: Returns all FAQs in English by default.
+* **Example Response**:
+  ```json
+  [
+    { 
+      "id": 1, 
+      "question": "What is Django?", 
+      "answer": "Django is a high-level Python web framework."
+    },
+    { 
+      "id": 2, 
+      "question": "What is Python?", 
+      "answer": "Python is an interpreted, high-level, general-purpose programming language."
+    }
+  ]
+
+
+* **Description**: Returns all FAQs in Hindi.
+* **Example Response**:
+  ```json
+  [
+    
+```json
+[
+  { 
+    "id": 1, 
+    "question": "Django क्या है?", 
+    "answer": "Django एक उच्च-स्तरीय पायथन वेब फ्रेमवर्क है।"
+  },
+  { 
+    "id": 2, 
+    "question": "पायथन क्या है?", 
+    "answer": "पायथन एक व्याख्यायित उच्च-स्तरीय सामान्य-उद्देश्य प्रोग्रामिंग भाषा है।"
+  }
+]
+  ]
+ 
 ## Admin Panel
 Access the admin panel at http://127.0.0.1:8000/admin/
 Admin can manage FAQs (add, update, delete).
