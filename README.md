@@ -113,6 +113,8 @@ python manage.py runserver
 ###9. Access the application:
 Open your browser and go to http://127.0.0.1:8000/.
 
+
+
 ## API Usage
 
 ### Fetch all FAQs
@@ -123,4 +125,39 @@ Open your browser and go to http://127.0.0.1:8000/.
 ### Fetch FAQs in a specific language
 
 *   **Endpoint**: `http://localhost:8000/api/faqs/<language_code>/`
-*   **Example**: `http://localhost:8000/api/faqs/gu/` will return FAQs in Gujarati.
+*   **Example**: `http://localhost:8000/api/faqs/bn/` will return FAQs in Bengali.
+*   **Example**: `http://localhost:8000/api/faqs/hi/` will return FAQs in Hindi.
+
+## Admin Panel
+Access the admin panel at http://127.0.0.1:8000/admin/
+Admin can manage FAQs (add, update, delete).
+You need to create a superuser to access the admin panel:
+
+``` bash
+python manage.py createsuperuser
+```
+
+## Caching
+
+   -Translations are cached using Redis for performance.
+   -You need to have Redis installed and running on your machine (As mentioned above).
+
+## Contribution Guidelines
+
+   -Fork the repository.
+   -Create a feature branch (git checkout -b feature-branch).
+   -Commit your changes (git commit -m 'feat: Add new feature').
+   -Push to the branch (git push origin feature-branch).
+   -Create a pull request.
+
+## License
+
+   -This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+   -Django for the web framework
+   -django-ckeditor for the WYSIWYG editor
+   -googletrans for language translation
+   -Redis for caching
+
