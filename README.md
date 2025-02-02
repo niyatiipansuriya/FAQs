@@ -154,6 +154,7 @@ Open your browser and go to http://127.0.0.1:8000/.
   ```
 
 
+* **Endpoint**: `http://localhost:8000/api/faqs/hn`
 * **Description**: Returns all FAQs in Hindi.
 * **Example Response**:
     
