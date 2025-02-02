@@ -20,8 +20,10 @@ A Django-based FAQ management system with multi-language translation support. Th
 ## Table of Contents:
 1. [Installation](#installation)
 2. [API Usage](#api-usage)
-3. [Contribution](#contribution)
-4. [License](#license)
+3. [Caching](#caching)
+4. [Contribution](#contribution)
+5. [License](#license)
+6. [Acknowledgments](#acknowledgment)
 
 ---
 
@@ -142,7 +144,7 @@ python manage.py createsuperuser
    -Translations are cached using Redis for performance.
    -You need to have Redis installed and running on your machine (As mentioned above).
 
-## Contribution Guidelines
+## Contribution
 
    -Fork the repository.
    -Create a feature branch (git checkout -b feature-branch).
