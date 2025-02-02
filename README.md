@@ -67,7 +67,7 @@ pip install redis
 pip install django-redis
 
 ```
-###5. Set up Redis:
+### 5. Set up Redis:
 
 Install Redis on your machine** (if it's not already installed).
 
@@ -92,7 +92,7 @@ Install Redis on your machine** (if it's not already installed).
    redis-server
    ```
 
-###6. Set up the Django project:
+### 6. Set up the Django project:
 
   -First, run makemigrations to create any required migrations for the database and then run migrate:
   ```bash
